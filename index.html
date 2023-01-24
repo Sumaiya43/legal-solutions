@@ -30,7 +30,63 @@
   <style>
     #check:checked ~ ul {
       top: 9%;
-    }
+    } 
+    /* TABS CONTAINER */
+.tab, .tab * {
+  
+  box-sizing: border-box;
+}
+.tab { max-width: 600px; }
+
+/* HIDE CHECKBOX */
+.tab input { display: none; }
+
+/* TAB LABEL */
+.tab label {
+  
+  position: relative; /* required for (f2) position:absolute */
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+ 
+ 
+  font-weight: 700;
+  color: #fff;
+  background: #eaecee;
+  cursor: pointer;
+}
+
+/* (D) TAB CONTENT - HIDDEN BY DEFAULT */
+/* css animation will not work with auto height */
+
+.tab .content {
+  background: #dfe1e4;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+.tab .content p { padding: 10px; }
+
+/* OPEN TAB ON CHECKED */
+.tab input:checked ~ .content { max-height: 100vh; }
+
+/*  EXTRA - ADD ARROW INDICATOR */
+.tab label::after {
+  /* (F1) RIGHT ARROW */
+  display: block;  
+  content: "\25b6";
+ 
+  /* PLACE AT RIGHT SIDE */
+  position: absolute;
+  right: 10px; top: 10px;
+ 
+  /* ANIMATED ARROW */
+  transition: all 0.4s;
+}
+ 
+/*ROTATE ARROW ON CHECKED */
+.tab input:checked ~ label::after { transform: rotate(90deg); }
   </style>
   <script>
     tailwind.config = {
@@ -423,8 +479,59 @@
         </button>
       </div>
     </section>
+   </section>
 
-      </section>
+   <!-- Question and Answer  -->
+   <section>
+      <div class="mx-auto  space-y-8 flex flex-col 
+      justify-center items-center text-center w-full mt-[9rem] mb-14">
+        <h1 class="md:font-bold md:text-5xl text-[#414040] font-semibold text-3xl">
+          Frequently Asked Any Questions
+        </h1>
+        <p class="text-[#707070]">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority
+          have  <br />suffered alteration in some form, by injected humour.
+        </p>
+      </div>
+      <div class=" container mx-auto flex md:flex-row flex-col justify-center items-center">
+        <div class="left">
+  <!-- FIRST TAB -->
+<div class="tab">
+  <input id="tab-1" type="checkbox">
+  <label class="text-black py-5" for="tab-1">1. What are the main diffrence between Flex-box & Grid-layout?</label>
+  <div class="content"><p class="text-[#707070]">The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.</p></div>
+</div>
+
+<!-- SECOND TAB -->
+<div class="tab">
+  <input id="tab-2" type="checkbox">
+  <label class="text-black py-5" for="tab-2">2. What is the purpose of media query?</label>
+  <div class="content"><p class="text-[#707070]"> Media queries are a key part of responsive web design, as they allow us to create different layouts depending on the size of the viewport</p></div>
+</div>
+
+<!-- THIRD TAB -->
+<div class="tab">
+  <input id="tab-3" type="checkbox">
+  <label class="text-black py-5" for="tab-3">3. What is the box model of CSS and how does it work?</label>
+  <div class="content"><p class="text-[#707070]">A box in CSS consists of a content area, which is where any text, images, or other HTML elements are displayed. This is optionally surrounded by padding, a border, and a margin, on one or more sides. The box model describes how these elements work together to create a box as displayed by CSS</p></div>
+</div>
+
+<!-- FOURTH TAB -->
+<div class="tab">
+  <input id="tab-4" type="checkbox">
+  <label class="text-black py-5" for="tab-4">4. What is semantic tag?</label>
+  <div class="content"><p class="text-[#707070]">Semantic HTML tags are tags that define the meaning of the content they contain.</p></div>
+</div>
+
+        </div>
+        <div class="right">
+          <div>
+            <img src="images/faq.png" alt="">
+          </div>
+        </div>
+      </div>
+   </section>
     </main>
     <footer></footer>
 
