@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LEGAL SOLUTIONS</title>
+    <!-- tailwind  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- bootsrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- font Poppin-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,7 +55,7 @@
           <img src="images/logo2.png" alt="" />
         </div>
         <div
-          class="nav-links md:static absolute md:bg-bg bg-black md:min-h-fit md:w-auto min-h-[60vh] w-full top-[-100%] item left-0 flex items-center px-5"
+          class="nav-links md:static absolute md:bg-bg sm:bg-black md:min-h-fit md:w-auto min-h-[60vh] w-full top-[-100%] item left-0 flex items-center px-5"
         >
           <ul
             class="text-light_grey list-none font-normal text-lg md:items-center md:gap-[4vw] gap-8 flex md:flex-row flex-col"
@@ -75,11 +78,53 @@
           </ul>
         </div>
         <div class="flex items-center gap-6">
-          <button
+          <!-- <button
             class="bg-btn_bg text-white px-7 py-4 rounded font-semibold text-lg"
           >
             Free Consultation
-          </button>
+          </button> -->
+         
+
+          <!-- modal starts  -->
+          <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Free Consultancy</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 Hey there, If you need any help regarding to the consultancy, Please Click on the below button so we can reach to you ASAP.
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Free Consultancy</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Thank you for reaching out.
+                  We'll Contact with you as soon as possible.
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Thank you</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="bg-btn_bg text-white px-7 py-4 rounded font-semibold text-lg" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Free Consultation</button>
+
+          <!-- modal ends -->
+
           <input type="checkbox" id="check" hidden />
           <label for="check">
             <ion-icon
@@ -250,8 +295,140 @@
        </div>
         </div>
       </section>
+
+      <!-- Clients Reviews  -->
+      <section>
+        <div class="mx-auto  space-y-8 flex flex-col 
+        justify-center items-center text-center w-full mt-[9rem] mb-14">
+          <h1 class="md:font-bold md:text-5xl text-[#414040] font-semibold text-3xl">
+           What Our Client Say
+          </h1>
+          <p class="text-[#707070]">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority
+            have  <br />suffered alteration in some form, by injected humour.
+          </p>
+        </div>
+      
+        <!-- carousel  -->
+        <!-- <section style="background-image: url('images/banner.png');" 
+       class="container w-full h-[550px] bg-no-repeat bg-cover ">
+        <div
+         class=" mx-auto mt-11  flex flex-col 
+         justify-center items-center text-center w-full h-[550px]
+         md:opacity-70 md:bg-black"
+        >
+          <div class="w-[72px] h-[62px]">
+            <img class="rounded-[100%] w-full h-full" src="images/Professional-Headshot-Poses-Blog-Post.jpg" alt="">
+          </div>
+          <h1 class="md:font-bold  text-white font-semibold text-3xl">
+            Awlad Hussain
+          </h1>
+          <h1 class=" text-white font-semibold text-base">
+            Full Stack Developer
+          </h1>
+          <p class="text-white mt-6">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority <br />
+            have suffered alteration in some form, by injected humour.
+          </p>
+        
+        </div>
+      </section> -->
+
+    <section class="container mx-auto">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div style="background-image: url(images/slider-1.jpg);" class="carousel-item active d-block ">
+            <div
+         class=" mx-auto mt-11  flex flex-col 
+         justify-center items-center text-center w-full h-[550px]
+         md:opacity-70 md:bg-black"
+        >
+          <div class="w-[72px] h-[62px]">
+            <img class="rounded-[100%] w-full h-full" src="images/Professional-Headshot-Poses-Blog-Post.jpg" alt="">
+          </div>
+          <h1 class="md:font-bold  text-white font-semibold text-3xl">
+            Awlad Hussain
+          </h1>
+          <h1 class=" text-white font-semibold text-base">
+            Full Stack Developer
+          </h1>
+          <p class="text-white mt-6">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority <br />
+            have suffered alteration in some form, by injected humour.
+          </p>
+        
+        </div>
+          </div>
+          <div class="carousel-item">
+            <div style="background-image: url(images/slider-2.jpg);" class="carousel-item active d-block w-100 h[100vh]">
+              <div
+           class=" mx-auto mt-11  flex flex-col 
+           justify-center items-center text-center w-full h-[550px]
+           md:opacity-70 md:bg-black"
+          >
+            <div class="w-[72px] h-[62px]">
+              <img class="rounded-[100%] w-full h-full" src="images/Professional-Headshot-Poses-Blog-Post.jpg" alt="">
+            </div>
+            <h1 class="md:font-bold  text-white font-semibold text-3xl">
+              Awlad Hussain
+            </h1>
+            <h1 class=" text-white font-semibold text-base">
+              Full Stack Developer
+            </h1>
+            <p class="text-white mt-6">
+              There are many variations of passages of Lorem Ipsum available, but
+              the majority <br />
+              have suffered alteration in some form, by injected humour.
+            </p>
+          
+          </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div style="background-image: url(images/slider-3.jpg);" class="carousel-item active d-block w-100 h[100vh]">
+              <div
+           class=" mx-auto mt-11  flex flex-col 
+           justify-center items-center text-center w-full h-[550px]
+           md:opacity-70 md:bg-black"
+          >
+            <div class="w-[72px] h-[62px]">
+              <img class="rounded-[100%] w-full h-full" src="images/Professional-Headshot-Poses-Blog-Post.jpg" alt="">
+            </div>
+            <h1 class="md:font-bold  text-white font-semibold text-3xl">
+              Awlad Hussain
+            </h1>
+            <h1 class=" text-white font-semibold text-base">
+              Full Stack Developer
+            </h1>
+            <p class="text-white mt-6">
+              There are many variations of passages of Lorem Ipsum available, but
+              the majority <br />
+              have suffered alteration in some form, by injected humour.
+            </p>
+          
+          </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+      </section>
     </main>
     <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script>
       const navLinks = document.querySelector(".nav-links");
       function onToggleMenu(e) {
