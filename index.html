@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LEGAL SOLUTIONS</title>
-</head>
-<body>
-    <h1>hi</h1>
-</body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font Poppin-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ionicicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <style>
+    #check:checked ~ ul{
+    top: 9%;
+  }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+            bg: "#F3F3F3",
+            light_grey: "#707070",
+            headline: "#414040",
+            btn_bg: "#B68C5A",
+          },
+        },
+      },
+    };
+  </script>
+  <body class="font-['Work Sans', sans-serif] bg-bg h-screen">
+    <header class="container mx-auto">
+      <!-- nav section -->
+      <nav class="flex justify-between items-center mt-12">
+        <div>
+          <img src="images/logo2.png" alt="" />
+        </div>
+        <div class=" nav-links md:static absolute md:bg-bg bg-black md:min-h-fit md:w-auto min-h-[60vh] w-full top-[-100%] item left-0 flex items-center px-5">
+          <ul class=" text-light_grey list-none font-normal text-lg md:items-center md:gap-[4vw] gap-8 flex md:flex-row flex-col">
+            <li>
+                <a class="hover:text-btn_bg" href="#">Home</a>
+            </li>
+            <li>
+                <a class="hover:text-btn_bg" href="#">Service</a>
+            </li>
+            <li>
+                <a class="hover:text-btn_bg" href="#">Cases</a>
+            </li>
+            <li>
+                <a class="hover:text-btn_bg" href="#">Blog</a>
+            </li>
+            <li>
+                <a class="hover:text-btn_bg" href="#">Contact Us</a>
+            </li>
+         </ul> 
+        </div>
+        <div class="flex items-center gap-6">
+          <button class="bg-btn_bg text-white px-7 py-4 rounded font-semibold text-lg" >
+            Free Consultation
+          </button>
+          <input type="checkbox" id="check" hidden>
+          <label for="check" >
+            <ion-icon onclick="onToggleMenu(this)" name="menu-outline" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+          </label>
+        </div>
+      </nav>
+      <!-- banner section -->
+    </header>
+    <main></main>
+    <footer></footer>
+    <script>
+      const navLinks = document.querySelector('.nav-links')
+      function onToggleMenu(e){
+        e.name= e.name === 'menu' ? 'close' : 'close' 
+        navLinks.classList.toggle('top-[16%]')
+      }
+    </script>
+  </body>
 </html>
